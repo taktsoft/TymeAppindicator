@@ -1,0 +1,6 @@
+ToDo:
+
+* Fix timezone issue: currently the timezone is omitted which leads to wrong times in tyme
+* Hotkey for new time entry isn't configurable
+* Changing the polling interval in preferences requires restart to take effect
+* New Task dialog doesn't always get focus

@@ -1,0 +1,13 @@
+Tyme-Appindicator
+
+A proof of concept implementation of a gtk appindicator applet for the "Tyme" time tracking software.
+
+Testet with Ubuntu 11.04
+
+
+Dependencies
+
+python-appindicator
+python-keybinder
+python-simplejson
+
