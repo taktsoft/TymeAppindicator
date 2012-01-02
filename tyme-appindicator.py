@@ -31,7 +31,7 @@ class TymeIndicator:
 
     def initialize_tyme_connector(self):
         print "initializing tyme connector"
-        self.refresh_interval = int(self.client.get_string("/apps/tyme/refresh_interval"))
+        self.refresh_interval = int(self.client.get_string("/apps/tyme/refresh_interval") or 120)
         url                   = str(self.client.get_string("/apps/tyme/url"))
         authentication_token  = str(self.client.get_string("/apps/tyme/authentication_token"))
         self.tyme = TymeConnector(url, authentication_token)
