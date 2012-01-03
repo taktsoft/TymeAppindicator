@@ -10,4 +10,4 @@ Dependencies
 python-appindicator
 python-keybinder
 python-simplejson
-
+python-dateutil

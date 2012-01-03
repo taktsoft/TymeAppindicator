@@ -4,13 +4,15 @@ import gtk
 import appindicator
 import gconf
 import gobject
-import time
 
 import json
 import urllib
 from urllib2 import Request, urlopen, URLError, HTTPError
 import re
 import keybinder
+
+from datetime import *
+from dateutil.tz import *
 
 class TymeIndicator:
     def __init__(self):
@@ -116,7 +118,7 @@ class TymeConnector:
 
     def create_task(self, task_description):
         try:
-            data = {"task": {"name": task_description, "duration": 0, "project_id": None, "cost_target_id": None, "category_id": None, "start": time.strftime("%d.%m.%Y %X",time.gmtime())}}
+            data = {"task": {"name": task_description, "duration": 0, "project_id": None, "cost_target_id": None, "category_id": None, "start": datetime.now(tzlocal()).strftime("%Y-%m-%dT%H:%M:00%z")}}
 
             values = json.dumps(data)
             headers = {}
